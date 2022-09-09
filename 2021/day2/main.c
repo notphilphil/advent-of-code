@@ -66,7 +66,7 @@ void find_aim_x_and_y(char **data_array, int len, int *aim, int *x, int *y) {
 }
 
 void get_move_and_dist(char *instruction, char *move, int *dist) {
-	memset(move, 0, strlen(move));
+	memset(move, 0, sizeof(char) * strlen(move));
 
 	int idx = 0;
 	while (instruction[idx] != ' ') {
